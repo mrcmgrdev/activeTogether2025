@@ -10,6 +10,4 @@ import { Store } from '../../shared/store';
 })
 export class Data {
   public store = inject(Store);
-
-  ngOnInit() {}
 }

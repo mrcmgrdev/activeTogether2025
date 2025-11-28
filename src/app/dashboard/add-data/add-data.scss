@@ -1,0 +1,25 @@
+.registration-form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 24px;
+
+  h2 {
+    margin-bottom: 24px;
+  }
+
+  .full-width {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .newsletter-checkbox {
+    display: block;
+    margin: 0 0 24px 0;
+  }
+
+  button[type='submit'] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+}

@@ -1,10 +1,10 @@
 .flex {
   display: flex;
   align-items: center;
-  justify-content: space-between; 
-  gap: 1rem;                   
+  justify-content: space-between;
+  gap: 1rem;
   padding: 1rem 2rem;
-  background-color: #f8f9fa;
+  background-color: var(--mat-sys-surface-container-low);
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
@@ -12,7 +12,7 @@
 .flex h1 {
   margin: 0;
   font-size: 1.5rem;
-  color: #333;
+  color: var(--mat-sys-on-surface);
 }
 
 .flex img {
@@ -28,11 +28,11 @@
 
 .flex a {
   text-decoration: none;
-  color: #0077cc;
+  color: var(--mat-sys-primary);
   font-weight: 500;
   transition: color 0.2s ease;
 }
 
 .flex a:hover {
-  color: #005fa3;
+  color: var(--mat-sys-primary-container);
 }
