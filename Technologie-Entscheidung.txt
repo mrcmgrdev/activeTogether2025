@@ -1,0 +1,52 @@
+Technologie-Entscheidung: CSS Grid vs. Bootstrap Grid
+=====================================================
+
+Entscheidung: CSS Grid
+
+Begründung:
+-----------
+
+1. Native Browser-Unterstützung
+   CSS Grid ist eine native CSS-Spezifikation und benötigt keine zusätzlichen Abhängigkeiten 
+   oder externe Bibliotheken. Dies reduziert die Bundle-Größe der Applikation erheblich und 
+   verbessert die Performance.
+
+2. Flexibilität und Präzision
+   CSS Grid bietet präzise Kontrolle über das Layout mit Funktionen wie:
+   - grid-template-columns: Ermöglicht die exakte Definition von 10 vs. 12 Spalten
+   - grid-column: Ermöglicht das Zentrieren des Contents (Spalten 2-11 von 12)
+   - align-items und justify-content: Für perfekte vertikale und horizontale Zentrierung
+   
+   Diese Anforderungen wären mit Bootstrap Grid komplexer umzusetzen, da Bootstrap 
+   hauptsächlich auf flexbox basiert und zusätzliche Wrapper oder Utility-Classes 
+   benötigen würde.
+
+3. Responsive Design ohne Framework-Limitierungen
+   Mit CSS Grid haben wir volle Kontrolle über:
+   - Mobile: 12 Spalten Breite (grid-column: 1 / -1)
+   - Desktop: 10 Spalten zentriert (grid-column: 2 / 12)
+   - Unterschiedliche Höhen per Breakpoint (min-height: 80px nur im Desktop-Mode)
+   
+   Bootstrap würde dafür mehrere Container, Rows und komplexe Offset-Klassen benötigen.
+
+4. Moderne Best Practice
+   CSS Grid ist der moderne Standard für zweidimensionale Layouts. Es ist speziell 
+   für Grid-basierte Designs entwickelt worden und bietet eine semantischere und 
+   wartbarere Lösung als Bootstrap's 12-Spalten-System.
+
+5. Bessere Performance
+   Keine zusätzliche CSS-Bibliothek (Bootstrap Grid = ~20-30KB) bedeutet:
+   - Schnellere Ladezeiten
+   - Weniger HTTP-Requests
+   - Geringerer Memory-Footprint
+
+6. Einfachere Wartung
+   Der Code ist selbsterklärend und direkt im SCSS definiert. Keine Notwendigkeit,
+   Bootstrap-Dokumentation zu konsultieren oder mit spezifischen Framework-Klassen
+   zu arbeiten.
+
+Fazit:
+------
+CSS Grid ist die optimale Wahl für dieses Projekt, da es maximale Kontrolle,
+beste Performance und modernen, wartbaren Code bietet - ohne zusätzliche 
+Abhängigkeiten.
